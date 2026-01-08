@@ -1,0 +1,1425 @@
+[2026-01-07 00:39:42] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pikachu","error":"cURL error 60: SSL certificate OpenSSL verify result: unable to get local issuer certificate (20) (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:39:42] local.ERROR: Failed to find Pokemon by name {"name":"pikachu","error":"Failed to fetch data from PokéAPI: cURL error 60: SSL certificate OpenSSL verify result: unable to get local issuer certificate (20) (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:39:46] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 60: SSL certificate OpenSSL verify result: unable to get local issuer certificate (20) (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:39:46] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 60: SSL certificate OpenSSL verify result: unable to get local issuer certificate (20) (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:39:46] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:48:43] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:48:43] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:48:43] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:48:49] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pikachu","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:48:49] local.ERROR: Failed to find Pokemon by name {"name":"pikachu","error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:49:58] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:49:58] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:49:58] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:50:56] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pikachu","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:50:56] local.ERROR: Failed to find Pokemon by name {"name":"pikachu","error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:53:03] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pikachu","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:53:03] local.ERROR: Failed to find Pokemon by name {"name":"pikachu","error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:53:04] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:53:04] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:53:04] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:54:05] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:54:05] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:54:05] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:54:11] local.INFO: Searching Pokemon {"query":"25"} 
+[2026-01-07 00:54:11] local.INFO: Trying search by ID {"id":25} 
+[2026-01-07 00:54:11] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/25","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:11] local.ERROR: Failed to find Pokemon by ID {"id":25,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:11] local.INFO: Trying search by name {"name":"25"} 
+[2026-01-07 00:54:11] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/25","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:11] local.ERROR: Failed to find Pokemon by name {"name":"25","error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:11] local.WARNING: Pokemon not found by name {"name":"25"} 
+[2026-01-07 00:54:11] local.INFO: Search completed {"query":"25","results":0} 
+[2026-01-07 00:54:18] local.INFO: Searching Pokemon {"query":"pikachu"} 
+[2026-01-07 00:54:18] local.INFO: Trying search by name {"name":"pikachu"} 
+[2026-01-07 00:54:19] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pikachu","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:54:19] local.ERROR: Failed to find Pokemon by name {"name":"pikachu","error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:54:19] local.WARNING: Pokemon not found by name {"name":"pikachu"} 
+[2026-01-07 00:54:19] local.INFO: Search completed {"query":"pikachu","results":0} 
+[2026-01-07 00:54:42] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/25","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:42] local.ERROR: Failed to find Pokemon by ID {"id":25,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:42] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/25","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:42] local.ERROR: Failed to find Pokemon by name {"name":"25","error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/25"} 
+[2026-01-07 00:54:42] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:54:42] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:54:42] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:55:39] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:55:39] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:55:39] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:55:41] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"} 
+[2026-01-07 00:55:41] local.ERROR: Failed to list Pokemon {"limit":20,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=20&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Application\\UseCases\\ListPokemonUseCase.php(33): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Http\\Controllers\\PokemonController.php(40): App\\Application\\UseCases\\ListPokemonUseCase->execute()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(47): App\\Http\\Controllers\\PokemonController->index()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\Route->runController()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#27 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#28 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#30 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch()
+#32 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}()
+#33 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}()
+#34 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#37 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#40 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#41 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#42 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#44 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#45 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#46 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#48 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle()
+#49 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}()
+#50 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then()
+#51 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 G:\\Jojo\\prueba tecnica\\pokedex-app\\public\\index.php(37): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
+#54 {main}"} 
+[2026-01-07 00:55:41] local.INFO: Pokemon loaded {"count":0,"page":1,"limit":20,"offset":0} 
+[2026-01-07 00:56:20] local.INFO: Searching Pokemon {"query":"pikachu"} 
+[2026-01-07 00:56:20] local.INFO: Trying search by name {"name":"pikachu"} 
+[2026-01-07 00:56:20] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pikachu","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:56:20] local.ERROR: Failed to find Pokemon by name {"name":"pikachu","error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 00:56:20] local.WARNING: Pokemon not found by name {"name":"pikachu"} 
+[2026-01-07 00:56:20] local.INFO: Search completed {"query":"pikachu","results":0} 
+[2026-01-07 01:01:03] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=3&offset=0"} 
+[2026-01-07 01:01:03] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pikachu","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon/pikachu"} 
+[2026-01-07 01:01:03] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon","error":"cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=3&offset=0"} 
+[2026-01-07 01:01:03] local.ERROR: Failed to list Pokemon {"limit":3,"offset":0,"error":"Failed to fetch data from PokéAPI: cURL error 77: error adding trust anchors from file: G:\\Jojo\\php-8.5.1-nts-Win32-vs17-x86\\cacert.pem (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://pokeapi.co/api/v2/pokemon?limit=3&offset=0","trace":"#0 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(73): App\\Infrastructure\\Services\\PokeApiClient->makeRequest()
+#1 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\Repository.php(427): App\\Infrastructure\\Services\\PokeApiClient->{closure:App\\Infrastructure\\Services\\PokeApiClient::getPokemonList():72}()
+#2 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Cache\\CacheManager.php(453): Illuminate\\Cache\\Repository->remember()
+#3 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Cache\\CacheManager->__call()
+#4 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Services\\PokeApiClient.php(72): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 G:\\Jojo\\prueba tecnica\\pokedex-app\\app\\Infrastructure\\Repositories\\PokeApiPokemonRepository.php(92): App\\Infrastructure\\Services\\PokeApiClient->getPokemonList()
+#6 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\psy\\psysh\\src\\ExecutionLoopClosure.php(55) : eval()'d code(1): App\\Infrastructure\\Repositories\\PokeApiPokemonRepository->list()
+#7 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\psy\\psysh\\src\\ExecutionLoopClosure.php(55): eval()
+#8 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\psy\\psysh\\src\\ExecutionClosure.php(90): {closure:Psy\\ExecutionLoopClosure::__construct():30}()
+#9 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\psy\\psysh\\src\\Shell.php(502): Psy\\ExecutionClosure->execute()
+#10 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\psy\\psysh\\src\\Shell.php(472): Psy\\Shell->doInteractiveRun()
+#11 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\symfony\\console\\Application.php(195): Psy\\Shell->doRun()
+#12 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\psy\\psysh\\src\\Shell.php(444): Symfony\\Component\\Console\\Application->run()
+#13 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\tinker\\src\\Console\\TinkerCommand.php(85): Psy\\Shell->run()
+#14 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Tinker\\Console\\TinkerCommand->handle()
+#15 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#16 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
+#17 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#18 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(696): Illuminate\\Container\\BoundMethod::call()
+#19 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call()
+#20 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\symfony\\console\\Command\\Command.php(341): Illuminate\\Console\\Command->execute()
+#21 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#22 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\symfony\\console\\Application.php(1102): Illuminate\\Console\\Command->run()
+#23 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\symfony\\console\\Application.php(356): Symfony\\Component\\Console\\Application->doRunCommand()
+#24 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\symfony\\console\\Application.php(195): Symfony\\Component\\Console\\Application->doRun()
+#25 G:\\Jojo\\prueba tecnica\\pokedex-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Symfony\\Component\\Console\\Application->run()
+#26 G:\\Jojo\\prueba tecnica\\pokedex-app\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#27 {main}"} 
+[2026-01-07 01:14:30] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-07 01:14:30] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-07 01:14:30] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-07 01:14:30] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-07 01:14:30] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-07 01:14:30] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-07 01:14:30] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-07 01:14:30] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-07 01:14:31] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-07 01:14:31] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-07 01:14:32] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-07 01:14:32] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-07 01:14:32] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-07 01:14:32] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-07 01:14:32] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-07 01:14:32] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-07 01:14:32] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-07 01:14:32] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-07 01:14:40] local.INFO: Searching Pokemon {"query":"pikachu"} 
+[2026-01-07 01:14:40] local.INFO: Trying search by name {"name":"pikachu"} 
+[2026-01-07 01:14:40] local.INFO: Found by name {"name":"pikachu"} 
+[2026-01-07 01:14:44] local.INFO: Searching Pokemon {"query":"25"} 
+[2026-01-07 01:14:44] local.INFO: Trying search by ID {"id":25} 
+[2026-01-07 01:14:44] local.INFO: Found by ID {"id":25} 
+[2026-01-07 01:14:46] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-07 01:14:46] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-07 01:14:46] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-07 01:14:46] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-07 01:14:46] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-07 01:14:46] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-07 01:14:46] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-07 01:14:46] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-07 01:14:47] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-07 01:14:47] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-07 01:14:47] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:41:49] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:41:49] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:41:49] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:41:50] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:41:50] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:41:50] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:44:00] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:44:00] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:44:00] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:44:00] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:44:58] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:44:58] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:44:58] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:44:58] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:45:26] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:45:26] local.INFO: Fetching Pokemon {"name":"spearow"} 
+[2026-01-08 14:45:26] local.INFO: Pokemon loaded successfully {"name":"spearow"} 
+[2026-01-08 14:45:26] local.INFO: Fetching Pokemon {"name":"fearow"} 
+[2026-01-08 14:45:26] local.INFO: Pokemon loaded successfully {"name":"fearow"} 
+[2026-01-08 14:45:26] local.INFO: Fetching Pokemon {"name":"ekans"} 
+[2026-01-08 14:45:26] local.INFO: Pokemon loaded successfully {"name":"ekans"} 
+[2026-01-08 14:45:26] local.INFO: Fetching Pokemon {"name":"arbok"} 
+[2026-01-08 14:45:26] local.INFO: Pokemon loaded successfully {"name":"arbok"} 
+[2026-01-08 14:45:26] local.INFO: Fetching Pokemon {"name":"pikachu"} 
+[2026-01-08 14:45:26] local.INFO: Pokemon loaded successfully {"name":"pikachu"} 
+[2026-01-08 14:45:26] local.INFO: Fetching Pokemon {"name":"raichu"} 
+[2026-01-08 14:45:26] local.INFO: Pokemon loaded successfully {"name":"raichu"} 
+[2026-01-08 14:45:26] local.INFO: Fetching Pokemon {"name":"sandshrew"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"sandshrew"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"sandslash"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"sandslash"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"nidoran-f"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"nidoran-f"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"nidorina"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"nidorina"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"nidoqueen"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"nidoqueen"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"nidoran-m"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"nidoran-m"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"nidorino"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"nidorino"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"nidoking"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"nidoking"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"clefairy"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"clefairy"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"clefable"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"clefable"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"vulpix"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"vulpix"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"ninetales"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"ninetales"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"jigglypuff"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"jigglypuff"} 
+[2026-01-08 14:45:27] local.INFO: Fetching Pokemon {"name":"wigglytuff"} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded successfully {"name":"wigglytuff"} 
+[2026-01-08 14:45:27] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:45:27] local.INFO: Pokemon loaded {"count":20,"page":2,"limit":20,"offset":20} 
+[2026-01-08 14:45:32] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:45:32] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:45:32] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:45:32] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:45:39] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:45:39] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:45:39] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:45:39] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:45:44] local.INFO: Searching Pokemon {"query":"Pichachu"} 
+[2026-01-08 14:45:44] local.INFO: Trying search by name {"name":"Pichachu"} 
+[2026-01-08 14:45:45] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pichachu","error":"HTTP request returned status code 404:
+Not Found
+"} 
+[2026-01-08 14:45:45] local.ERROR: Failed to find Pokemon by name {"name":"pichachu","error":"Failed to fetch data from PokéAPI: HTTP request returned status code 404:
+Not Found
+"} 
+[2026-01-08 14:45:45] local.WARNING: Pokemon not found by name {"name":"Pichachu"} 
+[2026-01-08 14:45:45] local.INFO: Search completed {"query":"Pichachu","results":0} 
+[2026-01-08 14:45:55] local.INFO: Searching Pokemon {"query":"Pichachu"} 
+[2026-01-08 14:45:55] local.INFO: Trying search by name {"name":"Pichachu"} 
+[2026-01-08 14:45:55] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/pichachu","error":"HTTP request returned status code 404:
+Not Found
+"} 
+[2026-01-08 14:45:55] local.ERROR: Failed to find Pokemon by name {"name":"pichachu","error":"Failed to fetch data from PokéAPI: HTTP request returned status code 404:
+Not Found
+"} 
+[2026-01-08 14:45:55] local.WARNING: Pokemon not found by name {"name":"Pichachu"} 
+[2026-01-08 14:45:55] local.INFO: Search completed {"query":"Pichachu","results":0} 
+[2026-01-08 14:46:00] local.INFO: Searching Pokemon {"query":"Picachu"} 
+[2026-01-08 14:46:00] local.INFO: Trying search by name {"name":"Picachu"} 
+[2026-01-08 14:46:01] local.ERROR: PokéAPI request exception {"endpoint":"/pokemon/picachu","error":"HTTP request returned status code 404:
+Not Found
+"} 
+[2026-01-08 14:46:01] local.ERROR: Failed to find Pokemon by name {"name":"picachu","error":"Failed to fetch data from PokéAPI: HTTP request returned status code 404:
+Not Found
+"} 
+[2026-01-08 14:46:01] local.WARNING: Pokemon not found by name {"name":"Picachu"} 
+[2026-01-08 14:46:01] local.INFO: Search completed {"query":"Picachu","results":0} 
+[2026-01-08 14:46:03] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:46:03] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:46:03] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:46:03] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:46:06] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"spearow"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"spearow"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"fearow"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"fearow"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"ekans"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"ekans"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"arbok"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"arbok"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"pikachu"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"pikachu"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"raichu"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"raichu"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"sandshrew"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"sandshrew"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"sandslash"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"sandslash"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"nidoran-f"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"nidoran-f"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"nidorina"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"nidorina"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"nidoqueen"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"nidoqueen"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"nidoran-m"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"nidoran-m"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"nidorino"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"nidorino"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"nidoking"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"nidoking"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"clefairy"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"clefairy"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"clefable"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"clefable"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"vulpix"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"vulpix"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"ninetales"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"ninetales"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"jigglypuff"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"jigglypuff"} 
+[2026-01-08 14:46:06] local.INFO: Fetching Pokemon {"name":"wigglytuff"} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded successfully {"name":"wigglytuff"} 
+[2026-01-08 14:46:06] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:46:06] local.INFO: Pokemon loaded {"count":20,"page":2,"limit":20,"offset":20} 
+[2026-01-08 14:46:11] local.INFO: Searching Pokemon {"query":"Raichu"} 
+[2026-01-08 14:46:11] local.INFO: Trying search by name {"name":"Raichu"} 
+[2026-01-08 14:46:11] local.INFO: Found by name {"name":"Raichu"} 
+[2026-01-08 14:46:18] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:46:18] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:46:18] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:46:18] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:46:32] local.INFO: Searching Pokemon {"query":"pikachu"} 
+[2026-01-08 14:46:32] local.INFO: Trying search by name {"name":"pikachu"} 
+[2026-01-08 14:46:32] local.INFO: Found by name {"name":"pikachu"} 
+[2026-01-08 14:48:51] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:48:51] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:48:51] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:48:51] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:49:10] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:49:10] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:49:10] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:49:10] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:49:20] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:49:20] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:49:20] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:49:20] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:50:13] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:50:13] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:50:13] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:50:13] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:50:13] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:50:13] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:50:13] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:50:13] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:50:13] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:50:13] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:50:13] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:50:13] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:50:13] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:50:13] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:50:14] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:50:14] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:50:14] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:50:38] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"spearow"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"spearow"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"fearow"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"fearow"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"ekans"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"ekans"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"arbok"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"arbok"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"pikachu"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"pikachu"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"raichu"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"raichu"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"sandshrew"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"sandshrew"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"sandslash"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"sandslash"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"nidoran-f"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"nidoran-f"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"nidorina"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"nidorina"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"nidoqueen"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"nidoqueen"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"nidoran-m"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"nidoran-m"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"nidorino"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"nidorino"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"nidoking"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"nidoking"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"clefairy"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"clefairy"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"clefable"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"clefable"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"vulpix"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"vulpix"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"ninetales"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"ninetales"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"jigglypuff"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"jigglypuff"} 
+[2026-01-08 14:50:38] local.INFO: Fetching Pokemon {"name":"wigglytuff"} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded successfully {"name":"wigglytuff"} 
+[2026-01-08 14:50:38] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:50:38] local.INFO: Pokemon loaded {"count":20,"page":2,"limit":20,"offset":20} 
+[2026-01-08 14:50:45] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:50:45] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:50:45] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:50:45] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:50:45] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:50:45] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:50:45] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:50:45] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:50:45] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:50:45] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:50:45] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:50:45] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:50:45] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:50:45] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:50:46] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:50:46] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:50:46] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:50:47] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:50:47] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:50:47] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:50:47] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:50:53] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:50:53] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:50:53] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:50:53] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
+[2026-01-08 14:51:00] local.INFO: Searching Pokemon {"query":"pikachu"} 
+[2026-01-08 14:51:00] local.INFO: Trying search by name {"name":"pikachu"} 
+[2026-01-08 14:51:00] local.INFO: Found by name {"name":"pikachu"} 
+[2026-01-08 14:56:20] local.INFO: API List Response {"has_data":true,"has_results":20} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"bulbasaur"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"bulbasaur"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"ivysaur"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"ivysaur"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"venusaur"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"venusaur"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"charmander"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"charmander"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"charmeleon"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"charmeleon"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"charizard"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"charizard"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"squirtle"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"squirtle"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"wartortle"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"wartortle"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"blastoise"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"blastoise"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"caterpie"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"caterpie"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"metapod"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"metapod"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"butterfree"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"butterfree"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"weedle"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"weedle"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"kakuna"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"kakuna"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"beedrill"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"beedrill"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"pidgey"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"pidgey"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"pidgeotto"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"pidgeotto"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"pidgeot"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"pidgeot"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"rattata"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"rattata"} 
+[2026-01-08 14:56:20] local.INFO: Fetching Pokemon {"name":"raticate"} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded successfully {"name":"raticate"} 
+[2026-01-08 14:56:20] local.INFO: Total Pokemon loaded {"count":20} 
+[2026-01-08 14:56:20] local.INFO: Pokemon loaded {"count":20,"page":1,"limit":20,"offset":0} 
